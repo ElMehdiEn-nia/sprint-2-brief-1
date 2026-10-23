@@ -26,6 +26,7 @@
         <a href="#create" class="rounded-full bg-white px-4 py-2 font-bold text-ink">+ Nouvelle créature</a>
       </nav>
     </div>
+    
   </header>
 
   <main class="mx-auto flex max-w-7xl flex-col gap-8 px-8 py-8  border border-blue-700">
@@ -39,18 +40,18 @@
           <input id="search" type="search" placeholder="Chercher un Pokemon" class="field font-normal">
         </label>
       </div>
-      <div id="filters" role="group" aria-label="Filtrer par type" class="flex h-11 flex-nowrap gap-2 overflow-hidden">
-          <button type="button" class="chip bg-white text-black border-white shrink-0">Tous</button>
-          <button type="button" class="chip shrink-0">Normal</button>
-          <button type="button" class="chip shrink-0">Eau</button>
-          <button type="button" class="chip shrink-0">Plante</button>
-          <button type="button" class="chip shrink-0">Electrique</button>
-          <button type="button" class="chip shrink-0">La terre</button>
-          <button type="button" class="chip shrink-0">Feu</button>
-          <button type="button" class="chip shrink-0">Combat</button>
-          <button type="button" class="chip shrink-0">Dragon</button>
-          <button type="button" class="chip shrink-0">Poison</button>
-      </div>
+      
+<div class="flex flex-wrap gap-2 my-4">
+  <button class="filter-btn text-white px-4 py-2 rounded-full font-medium shadow hover:bg-red-700 transition" data-type="Tous">Tous</button>
+  <button class="filter-btn  text-yellow-400 px-4 py-2 rounded-full font-medium hover:bg-black transition" data-type="Eau">Eau</button>
+  <button class="filter-btn text-yellow-400 px-4 py-2 rounded-full font-medium hover:bg-black transition" data-type="Electrique">Electrique</button>
+  <button class="filter-btn  text-yellow-400 px-4 py-2 rounded-full font-medium hover:bg-black transition" data-type="Feu">Feu</button>
+  <button class="filter-btn  text-yellow-400 px-4 py-2 rounded-full font-medium hover:bg-black transition" data-type="Normal">Normal</button>
+  <button class="filter-btn  text-yellow-400 px-4 py-2 rounded-full font-medium hover:bg-black transition" data-type="Dragon">Dragon</button>
+  <button class="filter-btn  text-yellow-400 px-4 py-2 rounded-full font-medium hover:bg-black transition" data-type="Poison">Poison</button>
+  <button class="filter-btn  text-yellow-400 px-4 py-2 rounded-full font-medium hover:bg-black transition" data-type="Combat">Combat</button>
+</div>
+
     </section>
 
     <div class="flex gap-8 items-start">
