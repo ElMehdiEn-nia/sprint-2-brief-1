@@ -1,22 +1,29 @@
-const submitButton = document.getElementById("submit-button");
-if (submitButton) {
-  submitButton.addEventListener('click', e => {
-    e.preventDefault();
-    const nameInput = document.getElementById("reservation-name");
-    const seatNumber = document.getElementById("seat-number");
-    const name = nameInput.value;
-    const seat = seatNumber.value;
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./index.html", "./script.js", "./data.js"],
+  theme: {
+    extend: {
 
-    const selectedSeat = document.getElementById("seat-" + seat);
-
-    if (selectedSeat) {
-      const nameText = document.createElement("reserved-seat");
-      nameText.textContent = name;
-      nameText.style.display = "block";
-      selectedSeat.style.backgroundColor = "#c60000";
-      nameText.style.fontSize = "10px";
-      selectedSeat.appendChild(nameText);
-      localStorage.setItem("Data", JSON.stringify({ name, seat }))
-    }
-  });
-}
+      colors: {
+        brand: {
+          DEFAULT: "#4B5563",
+          dark: "#374151",
+          light: "#E5E7EB",
+        },
+        ink: "#14171D",
+        muted: "#545B68",
+        ground: "#EDEFF3",
+        line: "#D5D9E1",
+      },
+      iijfontFamily: {
+        display: ["Arial", "sans-serif"],
+        body: ["Arial", "sans-serif"],
+        mono: ["Courier New", "monospace"],
+      },
+      borderRadius: {
+        card: "20px",
+      },
+    },
+  },
+  plugins: [],
+};
